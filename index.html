@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9e8ed">
+  <title>dear korea ♡ | Jastip Korea</title>
+  <meta name="description" content="Temukan pilihan produk Korea untuk jastip kamu.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">little things from korea, picked with love ♡</div>
+  <header class="site-header">
+    <a class="brand" href="#"><span class="brand-mark">♡</span><span><b>dear korea</b><small>KOREAN PERSONAL SHOPPER</small></span></a>
+    <nav><a href="#catalog">shop all</a><a href="#how-to-order">how to order</a></nav>
+    <button class="cart-trigger" id="open-cart" aria-label="Buka keranjang">bag <span id="cart-count">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">SEOUL → YOUR DOORSTEP</p>
+        <h1>Your little piece<br>of <em>Korea.</em></h1>
+        <p class="hero-desc">A curated little corner for your Korean favourites. Browse, fall in love, and let us bring them home to you.</p>
+        <a class="primary-link" href="#catalog">explore the catalogue <span>↗</span></a>
+        <p class="hero-note">thoughtfully picked, just for you ♡</p>
+      </div>
+      <div class="hero-art" aria-label="Dekorasi bunga dan pita">
+        <div class="art-stamp">MADE WITH<br>LOVE IN KOREA</div>
+        <div class="art-circle"></div><div class="art-bow">୨୧</div>
+        <div class="art-card"><span>k-beauty</span><span>daily finds</span><span>cute things</span></div>
+        <span class="sparkle sparkle-one">✳</span><span class="sparkle sparkle-two">✧</span>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="catalog">
+      <div class="section-heading"><div><p class="eyebrow">THE CURRENT EDIT</p><h2>Little finds, <em>big love.</em></h2></div><span id="product-total" class="product-total">Loading catalogue…</span></div>
+      <div class="toolbar">
+        <label class="searchbox"><span>⌕</span><input id="search" type="search" placeholder="Cari produk kesayanganmu..." aria-label="Cari produk"></label>
+        <select id="category-filter" aria-label="Filter kategori"><option value="">Semua kategori</option></select>
+        <label class="availability-toggle"><input type="checkbox" id="available-only" checked> Available only</label>
+      </div>
+      <div id="catalog-status" class="catalog-status">Menghubungkan katalog…</div>
+      <div class="product-grid" id="product-grid"></div>
+    </section>
+
+    <section class="how-section" id="how-to-order">
+      <p class="eyebrow">A LITTLE NOTE</p><h2>How to <em>order.</em></h2>
+      <div class="steps">
+        <article><span>01</span><h3>Find your faves</h3><p>Browse the catalogue and add your favourite Korean finds to your bag.</p></article>
+        <article><span>02</span><h3>Review your bag</h3><p>Check your items, quantity, and contact details before sending your order.</p></article>
+        <article><span>03</span><h3>We’ll confirm ♡</h3><p>Send your order through the form or WhatsApp. Your order is pending until we confirm it.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">♡</span><span><b>dear korea</b><small>KOREAN PERSONAL SHOPPER</small></span></a><p>made with love, from korea ♡</p></footer>
+
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Keranjang" aria-hidden="true">
+    <div class="drawer-heading"><div><p class="eyebrow">YOUR PICKS</p><h2>Your little bag <em>♡</em></h2></div><button class="icon-button" id="close-cart" aria-label="Tutup">×</button></div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-total"><span>Estimated total</span><strong id="cart-total">Rp0</strong></div>
+    <p class="tiny-note">Harga final dan ketersediaan akan dikonfirmasi admin. Order belum otomatis terkonfirmasi.</p>
+    <form id="order-form" class="order-form">
+      <label>Nama lengkap<input name="customerName" required maxlength="100" placeholder="Nama kamu"></label>
+      <label>WhatsApp aktif<input name="whatsapp" required maxlength="30" placeholder="Contoh: 08xxxxxxxxxx"></label>
+      <label>Catatan (opsional)<textarea name="notes" maxlength="500" rows="2" placeholder="Varian, request, atau catatan lainnya"></textarea></label>
+      <button class="primary-button" type="submit" id="submit-order">Kirim form order</button>
+    </form>
+    <button class="whatsapp-button" id="whatsapp-checkout" type="button">Lanjutkan via WhatsApp ↗</button>
+    <p id="order-message" class="order-message" role="status"></p>
+  </aside>
+  <script src="app.js"></script>
+</body>
+</html>
