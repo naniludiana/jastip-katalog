@@ -43,7 +43,7 @@ function renderCart(){
 function openCart(){$("#cart-drawer").classList.add("open");$("#drawer-backdrop").classList.add("open");$("#cart-drawer").setAttribute("aria-hidden","false");}
 function closeCart(){$("#cart-drawer").classList.remove("open");$("#drawer-backdrop").classList.remove("open");$("#cart-drawer").setAttribute("aria-hidden","true");}
 async function loadProducts(){
-  if(API_URL.startsWith("https://script.google.com/")&&!API_URL.includes("https://script.google.com/macros/s/AKfycbxtGHWHIkWFpEkWE0XIQ-bZh84O51ic_8K31Uyksue2RjGru7JIsiV2AUXclwmbXSOxFw/exec")){
+  if(API_URL.startsWith("https://script.google.com/macros/s/")){
     try{
       const r=await fetch(`${API_URL}?action=products`,{redirect:"follow"});
       if(!r.ok)throw new Error("API response was not OK");
